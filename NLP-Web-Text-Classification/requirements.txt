@@ -1,0 +1,8 @@
+Django
+mysqlclient
+numpy
+pandas
+torch
+transformers
+chardet
+openai
