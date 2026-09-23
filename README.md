@@ -186,5 +186,3 @@ This project was developed as an exploration of NLP, deep learning, and web-base
 <p align="center">
   <b>Thank you for visiting this project! ⭐</b>
 </p>
-This project!
-</p>
