@@ -1,245 +1,175 @@
-# 🧠 Natural Language Processing Classification of Web Texts Combined with Deep Learning
+# 🌐 Natural Language Processing: Web Text Classification
 
 <p align="center">
-  <b>Deep Learning-Based Web Text Classification System</b>
+  <b>Classifying web text using NLP and Deep Learning</b>
 </p>
 
 <p align="center">
-  An NLP project combining BERT contextual embeddings, BiGRU, CNN, and attention mechanisms for web text classification.
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python" />
+  <img src="https://img.shields.io/badge/NLP-Text%20Classification-purple" />
+  <img src="https://img.shields.io/badge/Deep%20Learning-AI-orange" />
+  <img src="https://img.shields.io/badge/Interface-Web%20Application-green" />
 </p>
 
 ---
 
-## 📌 About the Project
+## 📌 Project Overview
 
-**Natural Language Processing Classification of Web Texts Combined with Deep Learning** is a project that focuses on classifying web text using Natural Language Processing (NLP) and deep learning techniques.
+This project focuses on **Natural Language Processing (NLP)** and deep learning techniques to classify text collected from web sources. It provides a web interface where users can enter text, upload files, or process multiple text inputs and view classification results.
 
-The proposed approach combines **BERT contextual embeddings** with parallel **Bidirectional Gated Recurrent Unit (BiGRU)** and **Convolutional Neural Network (CNN)** components. An attention mechanism is incorporated to help the model focus on relevant features. The learned representations are combined and passed through a linear layer and Softmax for classification.
+The project explores different classification approaches, including **BERT-BGCA**, **OpenAI-based classification**, and an **ensemble approach**.
 
-The project also describes a web application developed using Django, with frontend technologies and MySQL database support.
+## 🎯 Objectives
 
----
+* Process and analyze text using NLP techniques.
+* Classify web text through deep learning-based approaches.
+* Provide a user-friendly web interface for text classification.
+* Display classification results for individual and multiple text inputs.
+* Explore and compare different classification approaches.
 
-## 🎯 Project Objectives
+## ✨ Features
 
-* Apply NLP techniques to web text classification.
-* Use BERT to obtain contextual text representations.
-* Combine BiGRU and CNN components to learn different text features.
-* Incorporate attention into the classification architecture.
-* Provide a web-based interface for interacting with the system.
-
----
-
-## ✨ Key Features
-
-* 📝 **Text Classification** – Classifies text using NLP and deep learning methods.
-* 🧠 **BERT Embeddings** – Captures contextual information from text.
-* 🔄 **BiGRU Network** – Learns sequential features from text.
-* 🧩 **CNN Component** – Extracts local patterns and features.
-* 🎯 **Attention Mechanism** – Helps the model focus on relevant representations.
-* 🔗 **Feature Concatenation** – Combines learned features before classification.
-* 🌐 **Django Web Application** – Provides the web application framework.
-* 🗄️ **MySQL Database** – Supports database integration.
-
----
+* 📝 **Single Text Classification** – Enter text and view its classification result.
+* 📂 **File Upload** – Upload a file for text classification.
+* 📚 **Batch Classification** – Process multiple text inputs.
+* 📊 **Results Display** – View the output through the web interface.
+* 🧠 **Multiple Approaches** – Explore BERT-BGCA, OpenAI-based, and ensemble classification.
 
 ## 🛠️ Technologies Used
 
-| Category             | Technology                       |
-| -------------------- | -------------------------------- |
-| Programming Language | Python 3.11.9                    |
-| Web Framework        | Django                           |
-| Database             | MySQL 8.0                        |
-| Frontend             | HTML, CSS, JavaScript, Bootstrap |
-| NLP                  | BERT                             |
-| Deep Learning        | BiGRU, CNN, Attention            |
-| Classification Layer | Linear Layer, Softmax            |
+| Technology        | Purpose                                         |
+| ----------------- | ----------------------------------------------- |
+| Python            | Main programming language                       |
+| NLP               | Text processing and analysis                    |
+| Deep Learning     | Text classification                             |
+| BERT-BGCA         | Classification approach explored in the project |
+| OpenAI            | AI-based classification approach                |
+| Ensemble Learning | Combining classification approaches             |
+| Web Technologies  | User interface and result presentation          |
 
----
-
-## 🏗️ System Architecture
-
-The architecture uses BERT to generate contextual embeddings. These representations are processed through parallel BiGRU and CNN components. The features are then combined and passed through the classification layers.
+## 🏗️ Project Architecture
 
 ```text
-                 Input Web Text
-                       │
-                       ▼
-              Text Preprocessing
-                       │
-                       ▼
-                BERT Embeddings
-                       │
-                ┌──────┴──────┐
-                ▼             ▼
-              BiGRU           CNN
-                │             │
-                └──────┬──────┘
-                       ▼
-               Attention Mechanism
-                       │
-                       ▼
-              Feature Concatenation
-                       │
-                       ▼
-                  Linear Layer
-                       │
-                       ▼
-                    Softmax
-                       │
-                       ▼
-              Classification Output
+                 ┌─────────────────────────┐
+                 │       User Input        │
+                 │                         │
+                 │  • Single Text          │
+                 │  • File Upload          │
+                 │  • Batch Text           │
+                 └────────────┬────────────┘
+                              │
+                              ▼
+                 ┌─────────────────────────┐
+                 │     Text Processing     │
+                 │   NLP / Preprocessing   │
+                 └────────────┬────────────┘
+                              │
+                              ▼
+                 ┌─────────────────────────┐
+                 │ Classification Methods  │
+                 │                         │
+                 │  • BERT-BGCA             │
+                 │  • OpenAI-based         │
+                 │  • Ensemble             │
+                 └────────────┬────────────┘
+                              │
+                              ▼
+                 ┌─────────────────────────┐
+                 │   Classification Output │
+                 │                         │
+                 │  Results shown to user  │
+                 │  through the web app    │
+                 └─────────────────────────┘
 ```
 
----
+## 🖥️ Application Screenshots
 
-## 🔬 Models and Approaches
-
-The project report refers to the following model approaches:
-
-* **BERT-BGCA**
-* **OpenAI**
-* **Ensemble**
-
-Their exact implementation details and comparative results should be interpreted according to the project source code and evaluation documentation.
-
----
-
-## 📊 Performance Metrics
-
-The project report states the following evaluation values:
-
-| Evaluation Metric | Reported Value |
-| ----------------- | -------------: |
-| Accuracy          |         95.21% |
-| F1-Score          |         94.36% |
-
-*These values are reported in the project documentation. Actual performance may depend on the dataset, preprocessing, training procedure, and evaluation methodology.*
-
----
-
-## 🖥️ Project Screenshots
-These images are stored inside the NLP-Web-Text-Classification/screenshots/ directory. The paths below are written relative to this root README.md.
+> These images are stored inside the `NLP-Web-Text-Classification/screenshots/` directory. The paths below are written relative to this **root README.md**.
 
 ### 🏠 Home Page
 
-![Home Page](screenshots/home.png)
+![Home Page](./NLP-Web-Text-Classification/screenshots/home.png)
 
-### ✍️ Single Text Classification
+### 📝 Single Text Classification
 
-![Single Text Classification](screenshots/single_text.png)
+![Single Text Classification](./NLP-Web-Text-Classification/screenshots/single_text.png)
 
 ### 📂 File Upload
 
-![File Upload](screenshots/file_upload.png)
+![File Upload](./NLP-Web-Text-Classification/screenshots/file_upload.png)
+
+### 📚 Batch Text Classification
+
+![Batch Text Classification](./NLP-Web-Text-Classification/screenshots/batch_text.png)
 
 ### 📊 Classification Results
 
-![Classification Results](screenshots/results.png)
+![Classification Results](./NLP-Web-Text-Classification/screenshots/results.png)
 
-### 📝 Batch Text Classification
+## 📈 Reported Performance
 
-![Batch Text Classification](screenshots/batch_text.png)
+The project report records the following performance metrics:
 
----
+| Metric   | Reported value |
+| -------- | -------------: |
+| Accuracy |         95.21% |
+| F1-score |         94.36% |
 
-## 📁 Project Structure
+*These are values reported in the project report; they should not be interpreted as independently reproduced results.*
+
+## 📁 Repository Structure
 
 ```text
 NLP-Web-Text-Classification/
 │
-├── docs/
-│   ├── ARCHITECTURE.md
-│   └── Project_Report.pdf
+├── README.md
 │
-├── screenshots/
-│   ├── batch_text.png
-│   ├── file_upload.png
-│   ├── home.png
-│   ├── results.png
-│   ├── single_text.png
-│   └── README.md
-│
-├── src/
-│   ├── forms/
-│   │   └── README.md
-│   ├── ml_models/
-│   │   └── README.md
-│   ├── utils/
-│   │   └── README.md
-│   └── README.md
-│
-├── .gitignore
-├── DATASET.md
-├── requirements.txt
-└── README.md
+└── NLP-Web-Text-Classification/
+    ├── README.md
+    ├── screenshots/
+    │   ├── home.png
+    │   ├── single_text.png
+    │   ├── file_upload.png
+    │   ├── batch_text.png
+    │   └── results.png
+    │
+    ├── docs/
+    ├── src/
+    ├── requirements.txt
+    └── DATASET.md
 ```
 
----
+## 🚀 Getting Started
 
-## ⚙️ Installation and Setup
-
-### Prerequisites
-
-* Python 3.11.9
-* MySQL 8.0
-* Git
-
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/ChAnjali304/NLP-Web-Text-Classification.git
 ```
 
-### 2. Open the Project Directory
+### 2. Open the project folder
 
 ```bash
-cd NLP-Web-Text-Classification
+cd NLP-Web-Text-Classification/NLP-Web-Text-Classification
 ```
 
-If the project files are inside the nested `NLP-Web-Text-Classification` folder, open that folder as well.
-
-### 3. Create a Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-Activate the environment on Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-### 4. Install Dependencies
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Configure the Database
+### 4. Run the application
 
-Configure the MySQL database connection according to the project's Django settings.
-
-### 6. Run the Application
-
-The Django run commands and database migration steps must be confirmed against the actual application source code before running the project.
-
----
+Check the project's source code and documentation for the correct application entry-point file and run command.
 
 ## 📚 Documentation
 
-* **Architecture:** `docs/ARCHITECTURE.md`
-* **Project Report:** `docs/Project_Report.pdf`
-* **Dataset Information:** `DATASET.md`
+Additional project information is available in the inner project directory:
 
----
-
-## ⚠️ Note
-
-This repository's documentation and screenshots describe the project. To install and run the complete application, the required application source code, model files, configuration, and dependencies must also be available.
-
----
+* [Project README](./NLP-Web-Text-Classification/README.md)
+* [Dataset Information](./NLP-Web-Text-Classification/DATASET.md)
+* [Project Documentation Folder](./NLP-Web-Text-Classification/docs/)
 
 ## 👩‍💻 Author
 
@@ -247,8 +177,14 @@ This repository's documentation and screenshots describe the project. To install
 
 GitHub: [ChAnjali304](https://github.com/ChAnjali304)
 
+## ⭐ Acknowledgement
+
+This project was developed as an exploration of NLP, deep learning, and web-based text classification.
+
 ---
 
 <p align="center">
-  ⭐ Thank you for visiting this project!
+  <b>Thank you for visiting this project! ⭐</b>
+</p>
+This project!
 </p>
